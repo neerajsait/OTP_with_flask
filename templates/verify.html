@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Verify OTP</title>
+</head>
+<body>
+    <h2>Verify OTP</h2>
+    <form action="/verify_otp" method="post">
+        <input type="hidden" name="email" value="{{ email }}">
+        <input type="text" name="otp" required placeholder="Enter OTP">
+        <button type="submit">Verify</button>
+    </form>
+</body>
+</html>
