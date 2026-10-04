@@ -1,44 +1,26 @@
-# OTP with flask
+# OTP_with_flask
 
-> OTP (One-Time Password) authentication system built with Flask and Python
+> A Flask signup flow that emails and verifies a one-time code.
 
-Built with Python and focused on authentication, flask, otp, python.
+## Overview
 
-## About this project
+The app generates a six-digit OTP, sends it through Flask-Mail, and checks the submitted code in a simple browser workflow. The current implementation keeps codes in process memory.
 
-This repository is part of **Neeraj Sai's** growing collection of software projects, experiments, and learning builds. It reflects a practical, curious approach to creating useful products and understanding how they work under the hood.
+## What’s in this repo
+
+- Signup form and OTP request route
+- Email delivery through SMTP
+- Code verification and a follow-up page
+
+## Stack
+
+Python, Flask, Flask-Mail, SMTP, HTML templates.
 
 ## Getting started
 
-Clone the repository and follow the setup instructions for the project's framework or language:
+1. Install Flask and Flask-Mail, then configure a test SMTP account locally without committing live credentials.
+2. Run `python app.py` and open the local address; test only with an account you control.
 
-```bash
-git clone https://github.com/neerajsait/OTP_with_flask.git
-cd OTP_with_flask
-```
+## Notes
 
-Check the project files for the available run commands and configuration requirements.
-
-## Links
-
-[Repository](https://github.com/neerajsait/OTP_with_flask)
-
-## Author
-
-**Tiruveedhi Neeraj Venkata Sai**
-
-- GitHub: [@neerajsait](https://github.com/neerajsait)
-- Portfolio: [neeraj's portfolio](https://github.com/neerajsait/portfoliomain)
-
-
-## Existing project documentation
-
-OTP_with_Flask
-
-A simple OTP (One-Time Password) generation and verification system built using Flask.
-
-Features
-- Generate a unique OTP
-- Send OTP via email (optional integration)
-- Verify OTP within a time limit
-- Simple Flask-based API
+The checked source uses placeholder credentials and in-memory OTP storage. Do not use this implementation for real accounts; add expiry, rate limits, secure secret handling, and persistent/session-safe storage first.
